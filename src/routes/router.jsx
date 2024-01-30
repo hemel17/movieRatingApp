@@ -8,6 +8,7 @@ import SingleTvSeries from "../pages/Home/SingleTvSeries/SingleTvSeries";
 import Rated from "../pages/Rated/Rated/Rated";
 import RatedMovies from "../pages/Rated/RatedMovies/RatedMovies";
 import RatedTvSeries from "../pages/Rated/RatedTvSeries/RatedTvSeries";
+import { fetchMovies } from "../pages/Home/Movies/FetchMovies";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       {
         path: "/movies",
         element: <Movies></Movies>,
+        loader: () => fetchMovies()
       },
       {
         path: "/:movieID",
