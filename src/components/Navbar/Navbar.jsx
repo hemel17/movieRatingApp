@@ -19,7 +19,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -39,10 +39,10 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">MovieTv</a>
+        <a className="text-xl btn btn-ghost">ShowHub</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+      <div className="hidden navbar-center lg:flex">
+        <ul className="px-1 menu menu-horizontal">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
