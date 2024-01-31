@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="mx-auto md:w-4/5">
+    <>
       <h1 className="mt-4 text-3xl text-center md:mt-8 md:text-5xl">
         Welcome to ShowHub!!!
       </h1>
@@ -20,7 +20,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Home;

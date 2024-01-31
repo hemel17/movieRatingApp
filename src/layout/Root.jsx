@@ -7,7 +7,10 @@ const Root = () => {
       <div className="md:w-4/5 mx-auto">
         <Navbar></Navbar>
       </div>
-      <Outlet></Outlet>
+
+      <div className="md:w-4/5 mx-auto">
+        <Outlet></Outlet>
+      </div>
     </>
   );
 };
