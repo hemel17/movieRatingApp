@@ -29,8 +29,9 @@ export const router = createBrowserRouter([
         loader: () => axios.get('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1')
       },
       {
-        path: "/:movieID",
+        path: "movies/movie/:movieID",
         element: <Movie></Movie>,
+        loader: () =>  axios.get('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1')
       },
       {
         path: "/tvseries",

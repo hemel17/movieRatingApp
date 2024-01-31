@@ -1,15 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Movies = () => {
   const moviesData = useLoaderData();
   const movies = moviesData.data.results;
-  console.log(movies);
+  
   return (
     <>
       <h2 className="text-2xl md:text-3xl text-center mt-6 mb-10">
         Check out the most popular movies!!!
       </h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {movies.map((movie) => (
           <div
             key={movie.id}
@@ -25,7 +25,7 @@ const Movies = () => {
               <h2 className="card-title">{movie.title}</h2>
               <p>{movie.overview.slice(0, 350) + '...'}</p>
               <div className="card-actions">
-                <button className="btn btn-primary w-full">View Details</button>
+                <button className="btn btn-primary w-full"><Link to={`movie/${movie.id}`}>View Details</Link></button>
               </div>
             </div>
           </div>
