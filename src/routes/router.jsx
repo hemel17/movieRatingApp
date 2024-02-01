@@ -8,6 +8,7 @@ import SingleTvSeries from "../pages/Home/SingleTvSeries/SingleTvSeries";
 import Rated from "../pages/Rated/Rated/Rated";
 import RatedMovies from "../pages/Rated/RatedMovies/RatedMovies";
 import RatedTvSeries from "../pages/Rated/RatedTvSeries/RatedTvSeries";
+import { movieLoader } from "../pages/Home/Movies/movieLoader";
 import axios from "axios";
 
 export const router = createBrowserRouter([
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
       {
         path: "/movies",
         element: <Movies></Movies>,
-        loader: () => axios.get('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1')
+        loader: movieLoader
       },
       {
         path: "movies/movie/:movieID",
